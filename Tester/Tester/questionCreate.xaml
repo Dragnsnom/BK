@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tester.questionCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tester"
+        mc:Ignorable="d"
+        Title="questionCreate" Height="720" Width="900">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Введите вопрос:"/>
+            <TextBox x:Name="QuestionTextBox" Height="50"/>
+
+            <TextBlock Text="Введите варианты ответов (каждый с новой строки):"/>
+            <TextBox x:Name="ChoicesTextBox" Height="100" TextWrapping="NoWrap" AcceptsReturn="True"
+                     KeyDown="OnKeyDownHandler" TextChanged="OnTextChanged"/>
+
+            <TextBlock Text="Выберите правильные ответы:"/>
+            <ListBox x:Name="ChoicesListBox" SelectionMode="Multiple" Height="100" />
+
+            <Button Content="Добавить вопрос" Click="Button_Click"/>
+
+            <Button Content="Сохранить тест" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>
